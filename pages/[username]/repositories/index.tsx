@@ -12,12 +12,12 @@ const Repositories: NextPage<{ repos: Repository[] }> = ({ repos }) => {
     <div className="mt-10">
       <h1 className="text-lg font-semibold">Repositories</h1>
 
-      <div className="mt-5 container mx-auto">
-        <div className="grid grid-cols-2 gap-3">
+      <div className="mt-5">
+        <div className="grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-3">
           {repos.slice(perPage * page, perPage * page + perPage).map((repo) => (
             <div
               key={repo.id}
-              className="flex border p-3 rounded border-gray-300 items-center"
+              className="flex bg-white border p-3 rounded border-gray-300 items-center"
             >
               <div className="w-40">
                 <img

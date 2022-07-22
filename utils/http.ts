@@ -2,7 +2,7 @@ import axios from "axios"
 
 const http = axios.create({
   headers: {
-    token: process.env.GITHUB_API_TOKEN ?? "",
+    Authorization: `${process.env.GITHUB_API_TOKEN}`,
   },
 })
 
