@@ -23,3 +23,8 @@ a {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif !important;
 }
+
+button:disabled {
+    cursor: not-allowed;
+  opacity: 0.5;
+}

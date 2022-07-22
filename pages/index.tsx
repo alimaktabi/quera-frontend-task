@@ -44,13 +44,13 @@ const Home: NextPage = () => {
         <div className="p-5 w-96 max-w-screen-sm  border border-gray-300 rounded-md shadow-md bg-white">
           <h1 className="text-center mb-10 text-2xl">Github Profile viewer</h1>
 
-          <div>
+          <form onSubmit={handleSubmit(search)}>
             <Text name="search" control={control} label="Username" />
 
             <div className="text-right mt-5">
               <Button
+                submit
                 loading={loading}
-                onClick={handleSubmit(search)}
                 size="sm"
                 variant="container"
                 color="primary"
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
                 Search
               </Button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </>
