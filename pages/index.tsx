@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           setLoading(false)
         })
     },
-    [setLoading]
+    [setLoading, setError, router]
   )
 
   return (

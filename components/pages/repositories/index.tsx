@@ -2,6 +2,7 @@ import { NextPage } from "next"
 import { Repository } from "../../../types/Repository"
 import { useState } from "react"
 import Button from "../../../components/Button"
+import Image from "next/image"
 
 const perPage = 6
 
@@ -20,10 +21,12 @@ const Repositories: NextPage<{ repos: Repository[] }> = ({ repos }) => {
               className="flex bg-white border p-3 rounded border-gray-300 items-center"
             >
               <div className="w-40">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={repo.owner.avatar_url}
                   alt={repo.owner.login}
-                  className="w-24 h-24 rounded-full border-2 border-gray-600"
+                  className="rounded-full border-2 border-gray-600"
                 />
               </div>
               <div className="w-60">

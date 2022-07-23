@@ -5,9 +5,10 @@ import { User } from "../../types/User"
 
 import { MdLocationPin } from "react-icons/md"
 import { Repository } from "../../types/Repository"
-import Repositories from "./repositories"
+import Repositories from "../../components/pages/repositories"
 import http from "../../utils/http"
 import NotFound from "./not-found"
+import Image from "next/image"
 import Styles from "./styles.module.sass"
 
 const Profile: NextPage<{ user?: User; repositories: Repository[] }> = ({
@@ -24,10 +25,12 @@ const Profile: NextPage<{ user?: User; repositories: Repository[] }> = ({
         <div className="m-4 mt-6 p-3">
           <div className="flex lg:flex-row flex-col gap-10">
             <div className="bg-white w-60 mx-auto p-4 text-center rounded border border-gray-400">
-              <img
+              <Image
                 src={user.avatar_url}
                 alt={user.login}
-                className="w-36 h-36 mx-auto rounded-full border-2 border-gray-600"
+                width={200}
+                height={200}
+                className="mx-auto rounded-full border-2 border-gray-600"
               />
               <h3 className="text-xl mt-5">{user.login}</h3>
 
